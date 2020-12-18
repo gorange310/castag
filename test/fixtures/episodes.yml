@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  note: MyText
+  published_at: 2020-12-18 19:39:09
+  minutes: 1
+  podcast: one
+
+two:
+  title: MyString
+  note: MyText
+  published_at: 2020-12-18 19:39:09
+  minutes: 1
+  podcast: two
