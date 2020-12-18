@@ -1,0 +1,14 @@
+<h1>Podcasts List</h1>
+<% @podcasts.each do |podcast| %>
+<hr>
+<div class = "podcast">
+  <%= image_tag( podcast.cover , alt: "Cover Image") %>
+  <h2 class="podcast-title" >
+    <%= link_to podcast.title, podcast %>
+     by <%= podcast.host %>
+   </h2>
+  <p class="podcast-description" >
+    <%= podcast.description %>
+  </p>
+</div>
+<% end %>

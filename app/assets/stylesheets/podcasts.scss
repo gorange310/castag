@@ -1,0 +1,17 @@
+// Place all the styles related to the podcasts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.podcast {
+  width: 600px;
+  //height: 150px;
+  padding: 4px;
+  //border: 1px solid #f0f0f0;
+  display: inline-block;
+  .podcast-title {
+    font-size: 28px;
+  }
+  .podcast-description {
+    //background-color: #f0f0f0;
+    //border: 1px dotted gray;
+  }
+}
