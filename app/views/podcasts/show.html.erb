@@ -5,4 +5,18 @@
   <p><%= @podcast.description %></p>
 </div>
 <hr>
+
 <h2>Episode List</h2>
+<% @episodes.each do |episode| %>
+<hr>
+<div class = "episode">
+  <%= episode.published_at %>
+  <%= episode.minutes %>
+  <h2 class="episode-title" >
+    <%= link_to episode.title, episode %>
+   </h2>
+  <p class="episode-note" >
+    <%= episode.note %>
+  </p>
+</div>
+<% end %>
