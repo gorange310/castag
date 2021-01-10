@@ -1,6 +1,6 @@
 class PodcastsController < ApplicationController
   def index
-    @podcasts = Podcast.all
+    @podcasts = Podcast.page(params[:page]).per(10)
   end
 
   def show

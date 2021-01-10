@@ -1,4 +1,6 @@
 <h1>Podcasts List</h1>
+<%= paginate @podcasts %>
+
 <% @podcasts.each do |podcast| %>
 <hr>
 <div class = "podcast">
@@ -12,3 +14,5 @@
   </p>
 </div>
 <% end %>
+
+<%= paginate @podcasts %>
