@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_18_113909) do
+ActiveRecord::Schema.define(version: 2021_02_11_145626) do
 
   create_table "episodes", force: :cascade do |t|
     t.string "title"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2020_12_18_113909) do
     t.integer "podcast_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "listen_ep_id"
+    t.index ["listen_ep_id"], name: "index_episodes_on_listen_ep_id"
     t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end
 
@@ -30,6 +32,8 @@ ActiveRecord::Schema.define(version: 2020_12_18_113909) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "listen_id"
+    t.index ["listen_id"], name: "index_podcasts_on_listen_id"
   end
 
   add_foreign_key "episodes", "podcasts"
