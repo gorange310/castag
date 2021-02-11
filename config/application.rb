@@ -20,3 +20,4 @@ module Castag
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+LISTEN_CONFIG = Rails.application.config_for(:listen_notes)
