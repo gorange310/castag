@@ -7,10 +7,10 @@
   <%= image_tag( podcast.cover , alt: "Cover Image") %>
   <h2 class="podcast-title" >
     <%= link_to podcast.title, podcast %>
-     by <%= podcast.host %>
-   </h2>
+      by <%= podcast.host %>
+  </h2>
   <p class="podcast-description" >
-    <%= podcast.description %>
+    <%= sanitize(podcast.description) %>
   </p>
 </div>
 <% end %>

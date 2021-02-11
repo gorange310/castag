@@ -2,7 +2,7 @@
   <%= image_tag( @podcast.cover , alt: "Cover Image") %>
   <h1><%= @podcast.title %></h1>
   <h2> by <%= @podcast.host %></h2>
-  <p><%= @podcast.description %></p>
+  <p><%= sanitize(@podcast.description) %></p>
 </div>
 <hr>
 
@@ -13,10 +13,10 @@
   <%= episode.published_at %>
   <%= episode.minutes %>
   <h2 class="episode-title" >
-    <%= link_to episode.title, episode %>
-   </h2>
+    <%= episode.title %>
+  </h2>
   <p class="episode-note" >
-    <%= episode.note %>
+    <%= sanitize(episode.note) %>
   </p>
 </div>
 <% end %>
