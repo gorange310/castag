@@ -5,6 +5,6 @@ class PodcastsController < ApplicationController
 
   def show
     @podcast = Podcast.find(params[:id])
-    @episodes = @podcast.episodes.order(id: :desc)
+    @episodes = @podcast.episodes.page(params[:page]).per(5)
   end
 end

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_11_145626) do
+ActiveRecord::Schema.define(version: 2021_02_11_174749) do
 
   create_table "episodes", force: :cascade do |t|
     t.string "title"
     t.text "note"
-    t.datetime "published_at"
-    t.integer "minutes"
+    t.integer "published_at"
+    t.integer "audio_length_sec"
     t.integer "podcast_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

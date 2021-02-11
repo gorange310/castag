@@ -7,11 +7,13 @@
 <hr>
 
 <h2>Episode List</h2>
+<%= paginate @episodes %>
 <% @episodes.each do |episode| %>
 <hr>
 <div class = "episode">
-  <%= episode.published_at %>
-  <%= episode.minutes %>
+  <%= episode.show_published_at %>
+  <br>
+  <%= episode.show_audio_length %>
   <h2 class="episode-title" >
     <%= episode.title %>
   </h2>
@@ -20,3 +22,4 @@
   </p>
 </div>
 <% end %>
+<%= paginate @episodes %>
