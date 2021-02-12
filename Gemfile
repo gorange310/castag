@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'bootstrap'
+
 # Unirest is a set of lightweight HTTP libraries available in multiple languages.
 gem 'unirest', '~> 1.1', '>= 1.1.2'
 
