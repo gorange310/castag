@@ -2,7 +2,6 @@ class Episode < ApplicationRecord
   belongs_to :podcast
   
   validates :title, presence: true
-  # validates :note, presence: true
   validates :published_at, presence: true
   validates :audio_length_sec, presence: true
 
@@ -15,6 +14,10 @@ class Episode < ApplicationRecord
     time = Time.at(self.audio_length_sec).utc
     time.strftime("%Hh: %Mm: %Ss")
     unless self.audio_length_sec > 3600 then time.strftime("%Mm: %Ss") end
+  end
+
+  def self.search(keyword)
+    where("title like '%#{keyword}%' or note like '%#{keyword}%'")
   end
 
 end

@@ -1,0 +1,20 @@
+<h2>Episode List</h2>
+
+<%= paginate @episodes %>
+  <% @episodes.each do |episode| %>
+  <hr>
+  <div class = "episode">
+    <%= image_tag( episode.podcast.cover , alt: "Cover Image") %>
+      <h3><%= episode.podcast.title %> by <%= episode.podcast.host %></h3>
+    <%= episode.show_published_at %>
+    <br>
+    <%= episode.show_audio_length %>
+    <h4 class="episode-title" >
+      <%= episode.title %>
+    </h4>
+    <p class="episode-note" >
+      <%= sanitize(episode.note) %>
+    </p>
+  </div>
+  <% end %>
+<%= paginate @episodes %>
