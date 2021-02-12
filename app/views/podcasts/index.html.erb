@@ -1,18 +1,18 @@
-<h1>Podcasts List</h1>
-<%= paginate @podcasts %>
-
-<% @podcasts.each do |podcast| %>
-<hr>
-<div class = "podcast">
-  <%= image_tag( podcast.cover , alt: "Cover Image") %>
-  <h2 class="podcast-title" >
-    <%= link_to podcast.title, podcast %>
-      by <%= podcast.host %>
-  </h2>
-  <p class="podcast-description" >
-    <%= sanitize(podcast.description) %>
-  </p>
+<div class="title-area">
+  <h2>Podcasts List</h2>
+    <%= paginate @podcasts %>
+      <% @podcasts.each do |podcast| %>
+      <hr>
+      <div class = "podcast">
+        <%= image_tag( podcast.cover , alt: "Cover Image") %>
+        <h3 class="podcast-title" >
+          <%= link_to podcast.title, podcast %>
+            by <%= podcast.host %>
+        </h3>
+        <p class="podcast-description" >
+          <%= sanitize(podcast.description) %>
+        </p>
+      </div>
+      <% end %>
+  <%= paginate @podcasts %>
 </div>
-<% end %>
-
-<%= paginate @podcasts %>
