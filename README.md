@@ -1,14 +1,9 @@
-# Alpha Blog
+# Castag
 
-This is a blog app\
-I'm currently a Ruby/Rails app developer, this is my personal project when I was learn from Udemy Course: the-complete-ruby-on-rails-developer-course.
+This is a podcast search app\
+I'm currently a Ruby/Rails app developer, this is my personal project when I was learning web API
 
-I followed RESTful conventions for my routes but since I was only utilizing certain functions, I added limitations to them.\
-Users can only be showed.\
-Stcoks can only be updated.\
-It isn't full CRUD but enough to implement the user stories required. There’s also room to expand in the future to for the other CRUD features.
-
-I expanded model: Comment, and RESTful for the routes. Guest can sign up and post the comment on each post.
+I followed RESTful conventions for my routes
 
 ## 1 Development tools
 
